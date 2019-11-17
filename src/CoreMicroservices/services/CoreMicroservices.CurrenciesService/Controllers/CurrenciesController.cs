@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CoreMicroservices.CurrenciesService.model;
 using CoreMicroservices.CurrenciesService.services.contracts;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -27,6 +28,20 @@ namespace CoreMicroservices.CurrenciesService.Controllers
         public ActionResult<List<Currency>> Get()
         {
             return Ok(_currencyService.GetAll());
+        }
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [HttpGet("{code}")]
+        public ActionResult<Currency> GetByCode(string code)
+        {
+            var currency = _currencyService.GetByCode(code);
+            if (currency != null)
+            {
+                return Ok(currency);
+            }
+
+            return NotFound();
         }
     }
 }
