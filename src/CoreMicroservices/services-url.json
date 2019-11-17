@@ -1,0 +1,5 @@
+{
+	"services": {
+		"currencies": "https://localhost:44380/currencies"
+	}
+}
