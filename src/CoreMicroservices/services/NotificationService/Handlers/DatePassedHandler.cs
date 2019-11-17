@@ -14,7 +14,6 @@ namespace NotificationService.Handlers
 
         public Task Handle(DatePassedEvent @event)
         {
-
             return Task.CompletedTask;
         }
 

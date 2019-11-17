@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeWorkerService", "servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "services\NotificationService\NotificationService.csproj", "{C31FD374-55F3-47D5-81DD-62138748DEC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomersService", "services\CustomersService\CustomersService.csproj", "{A1767903-086C-4E4C-8ACE-FADE0A6F70E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,6 +74,10 @@ Global
 		{C31FD374-55F3-47D5-81DD-62138748DEC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C31FD374-55F3-47D5-81DD-62138748DEC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C31FD374-55F3-47D5-81DD-62138748DEC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1767903-086C-4E4C-8ACE-FADE0A6F70E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1767903-086C-4E4C-8ACE-FADE0A6F70E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1767903-086C-4E4C-8ACE-FADE0A6F70E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1767903-086C-4E4C-8ACE-FADE0A6F70E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{0ECD1278-5193-4569-8848-409CD1BA4DD4} = {5198BE8A-1E49-4153-919B-00449DC99939}
 		{7BC2C9BC-1BE8-4C7C-B22C-69D676BD0057} = {C922C7A7-E511-47D0-8585-4A70F1CEE710}
 		{C31FD374-55F3-47D5-81DD-62138748DEC6} = {C922C7A7-E511-47D0-8585-4A70F1CEE710}
+		{A1767903-086C-4E4C-8ACE-FADE0A6F70E7} = {C922C7A7-E511-47D0-8585-4A70F1CEE710}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25BDADE2-2F9D-40F6-961A-F81AD6EB7890}
