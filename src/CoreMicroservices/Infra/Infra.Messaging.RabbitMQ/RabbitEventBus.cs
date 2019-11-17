@@ -25,7 +25,8 @@ namespace Infra.RabbitMQ
             {
                 HostName = Config.Host,
                 UserName = Config.UserName,
-                Password = Config.Password
+                Password = Config.Password,
+                Port = Config.Port
             };
 
             using (var connection = factory.CreateConnection())

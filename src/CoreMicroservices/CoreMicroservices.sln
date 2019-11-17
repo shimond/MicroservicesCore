@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientApp", "tempClient\Cli
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D67814A6-F533-4525-8770-D726C3132F05}"
 	ProjectSection(SolutionItems) = preProject
+		rabbit-mq.json = rabbit-mq.json
+		rabbitmq-docker-command.text = rabbitmq-docker-command.text
 		services-url.json = services-url.json
 	EndProjectSection
 EndProject
@@ -27,6 +29,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.Messaging", "Infra\Infra.Messaging\Infra.Messaging.csproj", "{9B7C8B33-1C6E-4AEE-A121-1E06D1D9EC2F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra.Messaging.RabbitMQ", "Infra\Infra.Messaging.RabbitMQ\Infra.Messaging.RabbitMQ.csproj", "{0ECD1278-5193-4569-8848-409CD1BA4DD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeWorkerService", "services\TimeWorkerService\TimeWorkerService.csproj", "{7BC2C9BC-1BE8-4C7C-B22C-69D676BD0057}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +62,10 @@ Global
 		{0ECD1278-5193-4569-8848-409CD1BA4DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ECD1278-5193-4569-8848-409CD1BA4DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ECD1278-5193-4569-8848-409CD1BA4DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC2C9BC-1BE8-4C7C-B22C-69D676BD0057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC2C9BC-1BE8-4C7C-B22C-69D676BD0057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC2C9BC-1BE8-4C7C-B22C-69D676BD0057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC2C9BC-1BE8-4C7C-B22C-69D676BD0057}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +77,7 @@ Global
 		{C6BF9EB9-FDC1-4070-BAE5-2AB4F0391ADE} = {E0E67D38-F53A-42C7-9ABF-58D8782831BE}
 		{9B7C8B33-1C6E-4AEE-A121-1E06D1D9EC2F} = {5198BE8A-1E49-4153-919B-00449DC99939}
 		{0ECD1278-5193-4569-8848-409CD1BA4DD4} = {5198BE8A-1E49-4153-919B-00449DC99939}
+		{7BC2C9BC-1BE8-4C7C-B22C-69D676BD0057} = {C922C7A7-E511-47D0-8585-4A70F1CEE710}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25BDADE2-2F9D-40F6-961A-F81AD6EB7890}
