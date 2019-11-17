@@ -64,6 +64,7 @@ namespace Infra.RabbitMQ
                 HostName = this.Config.Host,
                 UserName = Config.UserName,
                 Password = Config.Password,
+                Port = Config.Port,
                 DispatchConsumersAsync = true
             };
 
