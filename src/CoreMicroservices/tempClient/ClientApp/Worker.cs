@@ -14,11 +14,13 @@ namespace ClientApp
 {
     public class Worker : BackgroundService
     {
+        private readonly HttpClient _httpClient;
         private readonly IConfiguration _configuration;
         private readonly ILogger<Worker> _logger;
 
-        public Worker(ILogger<Worker> logger, IConfiguration configuration)
+        public Worker(ILogger<Worker> logger, IConfiguration configuration, HttpClient httpClient)
         {
+            _httpClient = httpClient;
             _configuration = configuration;
             _logger = logger;
         }

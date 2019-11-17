@@ -1,16 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-//using Polly;
-//using Polly.Extensions.Http;
+using Microsoft.Extensions.Logging;
 
-namespace ClientApp
+namespace ConsumerService
 {
     public class Program
     {
@@ -19,15 +17,12 @@ namespace ClientApp
             CreateHostBuilder(args).Build().Run();
         }
 
-       
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
             .ConfigureHostConfiguration(host => host.AddJsonFile(Path.GetFullPath("../../services-url.json")))
-                .ConfigureServices((hostContext, services) =>
+                .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    services.AddHttpClient<Worker>("a",x=>x.BaseAddress = new Uri("http://walla.co.il"));
-                    //.AddPolicyHandler(GetPolicy());
-                    services.AddHostedService<Worker>();
+                    webBuilder.UseStartup<Startup>();
                 });
     }
 }

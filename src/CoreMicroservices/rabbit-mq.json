@@ -1,0 +1,9 @@
+{
+	"EventBus": {
+		"Host": "localhost",
+		"UserName": "shimon",
+		"Password": "Nxprnzk7",
+		"Exchange": "",
+		"Port": 8090
+	}
+}
