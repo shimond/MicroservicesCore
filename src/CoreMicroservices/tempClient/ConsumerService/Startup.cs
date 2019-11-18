@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Polly;
 using Polly.Extensions.Http;
+using Steeltoe.Discovery.Client;
 
 namespace ConsumerService
 {
@@ -40,6 +41,7 @@ namespace ConsumerService
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDiscoveryClient(Configuration);
             
             services.AddHttpClient("CURRRENCY", client =>
                           client.BaseAddress = new Uri(Configuration["services:currencies"]))

@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Steeltoe.Discovery.Client;
 
 namespace CoreMicroservices.CurrenciesService
 {
@@ -28,6 +29,7 @@ namespace CoreMicroservices.CurrenciesService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDiscoveryClient(Configuration);
             services.AddSingleton<ICurrencyService, CurrencyService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -62,6 +64,8 @@ namespace CoreMicroservices.CurrenciesService
             {
                 endpoints.MapControllers();
             });
+
+            app.UseDiscoveryClient();
         }
     }
 }
