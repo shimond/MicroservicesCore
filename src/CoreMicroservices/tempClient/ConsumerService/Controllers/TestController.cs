@@ -19,7 +19,8 @@ namespace ConsumerService.Controllers
         private readonly ILogger<TestController> _logger;
         private readonly DiscoveryHttpClientHandler _handler;
 
-        public TestController(ILogger<TestController> logger, IHttpClientFactory clientFactory, IDiscoveryClient discoveryClient)
+        public TestController(ILogger<TestController> logger, IHttpClientFactory clientFactory, 
+            IDiscoveryClient discoveryClient)
         {
             _httpClient = clientFactory.CreateClient("CURRRENCY");
             _logger = logger;
