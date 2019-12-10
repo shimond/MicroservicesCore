@@ -1,1 +1,1 @@
-docker run -d -p 8080:15672 -e RABBITMQ_DEFAULT_USER=shimon -e RABBITMQ_DEFAULT_PASS=Nxprnzk7 rabbitmq:3-management
+docker run -d -p 8080:15672 8090:5672 -e RABBITMQ_DEFAULT_USER=shimon -e RABBITMQ_DEFAULT_PASS=Nxprnzk7 rabbitmq:3-management
