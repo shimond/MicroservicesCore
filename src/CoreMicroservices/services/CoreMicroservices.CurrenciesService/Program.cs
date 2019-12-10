@@ -18,6 +18,7 @@ namespace CoreMicroservices.CurrenciesService
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+            .ConfigureHostConfiguration(x=>x.AddJsonFile("seq.json"))
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

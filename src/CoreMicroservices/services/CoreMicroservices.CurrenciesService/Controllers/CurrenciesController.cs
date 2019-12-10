@@ -27,6 +27,10 @@ namespace CoreMicroservices.CurrenciesService.Controllers
         [HttpGet]
         public ActionResult<List<Currency>> Get()
         {
+            _logger.LogInformation("INFO");
+            _logger.LogWarning("WARNING");
+            _logger.LogError( new DivideByZeroException(),  "ERROR");
+            _logger.LogDebug("DEBUG");
             return Ok(_currencyService.GetAll());
         }
 
